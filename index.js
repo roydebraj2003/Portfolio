@@ -12,7 +12,6 @@ const __dirname = dirname(__filename);
 app.use(express.static(join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Set your Gmail credentials using environment variables
 const gmailUser = process.env.GMAIL_USER || 'your-email@gmail.com';
 const gmailPass = process.env.GMAIL_PASS || 'your-email-password';
 
