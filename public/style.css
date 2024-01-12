@@ -1,5 +1,5 @@
 body {
-    background-image: url('./picture/desktop-with-camera-office-accessories-circle.jpg'); /* Replace 'your-image-url.jpg' with the path or URL to your image */
+    background-image: url('./desktop-with-camera-office-accessories-circle.jpg'); /* Replace 'your-image-url.jpg' with the path or URL to your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@ body {
   }
   @media (max-width: 767px) {
     body {
-      background-image: url('./picture/WhatsApp\ Image\ 2024-01-10\ at\ 19.37.51_2d11fefe.jpg');
+      background-image: url('./WhatsApp\ Image\ 2024-01-10\ at\ 19.37.51_2d11fefe.jpg');
     }
 }
 .footer {
