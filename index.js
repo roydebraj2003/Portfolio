@@ -5,14 +5,18 @@ import { join, dirname } from "path";
 import nodemailer from "nodemailer";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Use the PORT environment variable if set
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
+// Serve static files from the "public" folder
 app.use(express.static(join(__dirname, 'public')));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const gmailUser = process.env.GMAIL_USER || 'your-email@gmail.com';
-const gmailPass = process.env.GMAIL_PASS || 'your-email-password';
+const gmailUser = "roydebrajmusic@gmail.com";
+const gmailPass = "vrve lrks ycge tgbk";
 
 app.get("/", (req, res) => {
   res.sendFile(join(__dirname, "index.html"));
@@ -28,24 +32,22 @@ app.post("/process-form", (req, res) => {
   const email = req.body.email;
   const message = req.body.message;
 
-  // Validate input (you may want to add more validation)
+  // Validate input
   if (!email || !message) {
     return res.status(400).send('Invalid input');
   }
 
-  // Create a nodemailer transporter with Gmail credentials
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: "roydebrajmusic@gmail.com",
-      pass: "vrve lrks ycge tgbk"
+      user: gmailUser,
+      pass: gmailPass
     }
   });
 
-  // Configure the email options
   const mailOptions = {
     from: gmailUser,
-    to: 'roydebrajmusic@gmail.com', // your email address
+    to: 'roydebrajmusic@gmail.com',
     subject: 'New Message from Contact Form',
     text: `Email: ${email}\n\nMessage: ${message}`
   };
@@ -57,12 +59,9 @@ app.post("/process-form", (req, res) => {
     }
 
     console.log('Email sent:', info.response);
-
-    // Redirect to the main page on success
     res.redirect('/');
   });
 });
-
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
