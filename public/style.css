@@ -1,9 +1,9 @@
 body {
-  background-image: url('/desktop-with-camera-office-accessories-circle.jpg'); /* Replace 'your-image-url.jpg' with the path or URL to your image */
-  background-size: cover;
+  background-image: url('/desktop-with-camera-office-accessories-circle.jpg'); 
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Fixed background */
+  background-attachment: fixed;
   height: 100vh;
   margin: 0;
 }
@@ -11,6 +11,13 @@ body {
 @media (max-width: 767px) {
   body {
       background-image: url('/WhatsApp Image 2024-01-10 at 19.37.51_2d11fefe.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 100vh;
+      margin: 0;
+    }
   }
 }
 
