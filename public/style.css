@@ -9,7 +9,8 @@ body {
 
 @media (max-width: 767px) {
   body {
-    background-image: url('/WhatsApp Image 2024-01-10 at 19.37.51_2d11fefe.jpg');
+    background-image: url('./WhatsApp Image 2024-01-10 at 19.37.51_2d11fefe.jpg');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,6 +21,7 @@ body {
 
 .footer {
   background-color: #000;
+  background-position: center;
   color: #fff;
   padding: 15px;
   text-align: center;
