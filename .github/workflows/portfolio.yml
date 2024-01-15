@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14]
+        node-version: [10.2.3]
 
     steps:
     - name: Checkout repository
@@ -23,7 +23,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies and run tests
+    - name: Set up Jekyll and Build
+      run: |
+        gem install bundler
+        bundle install
+        bundle exec jekyll build
+
+    - name: Install Node.js dependencies and run tests
       run: |
         npm install
         npm test
