@@ -10,7 +10,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/desktop-with-camera-office-accessories-circle.jpg');
+  background-image: url('desktop-with-camera-office-accessories-circle.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1; /* Send the pseudo-element to the back */
