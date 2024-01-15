@@ -1,5 +1,5 @@
 body {
-  background-image: url()); 
+  background-image: url('/workplace-with-office-accessories-circle.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -7,9 +7,9 @@ body {
   margin: 0;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 767px) {
   body {
-    background-image: url();
+    background-image: url('/public/workplace-with-office-accessories-circle.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
